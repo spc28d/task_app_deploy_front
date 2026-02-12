@@ -12,6 +12,7 @@ const Navbar = () => {
   const isActive = (location) => path.pathname === location;
 
   const googleClientId = import.meta.env.VITE_AUTH_CLIENT_ID;
+  console.log(googleClientId);
   const dispatch = useDispatch();
   const state = useSelector((state) => state.auth.authData);
   const { name } = state || {};
@@ -29,7 +30,7 @@ const Navbar = () => {
         console.error('Google Login Error: ', error);
       }
     },
-    [dispatch]
+    [dispatch],
   );
 
   const handleLogoutClick = () => {
