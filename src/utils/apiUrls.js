@@ -1,4 +1,4 @@
-const DOMAIN = 'http://54.159.6.95/';
+const DOMAIN = 'https://backend.mparade.site';
 
 const GET_TASKS_API_URL = `${DOMAIN}/get_tasks`;
 const POST_TASK_API_URL = `${DOMAIN}/post_task`;
