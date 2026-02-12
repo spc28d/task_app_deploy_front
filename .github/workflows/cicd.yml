@@ -29,8 +29,8 @@ jobs:
     runs-on: aws-ec2
     steps:
       - name: Pull image from docker hub
-        run: docker pull spc28d/aicc_task_front:latest
+        run: docker pull spc28d/task_app_front_deploy:latest
       - name: Delete Existing Container
         run: docker rm -f task-container
       - name: Run container
-        run: docker run -d -p 80:80 --name task-container marshallhch/aicc_task_front
+        run: docker run -d -p 80:80 --name task-container spc28d/task_app_front_deploy
